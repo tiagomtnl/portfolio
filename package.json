@@ -1,0 +1,30 @@
+{
+  "name": "tm-portfolio",
+  "version": "1.0.0",
+  "description": "tmPortfolio",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "#"
+  },
+  "keywords": [
+    "Gulp boilerplate"
+  ],
+  "author": "Tiago Martinelli",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^2.0.4"
+  },
+  "dependencies": {
+    "gulp-twig": "^1.2.0"
+  }
+}

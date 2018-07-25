@@ -1,0 +1,28 @@
+html {
+    font-size: $font-size-default;
+}
+
+body {
+    color: $light;
+    font-family: $font-regular;
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+    box-sizing: border-box;
+    background: $dark;
+}
+
+// Flex parent 
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; // Automatic fit on line below
+    justify-content: flex-start; // Start on left
+    align-items: stretch; // Same height
+}
+
+// Flex child
+.col {
+    width: 50vw;
+    padding: 4rem;
+    box-sizing: border-box;
+}

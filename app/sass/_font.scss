@@ -1,0 +1,14 @@
+@include fontface('Raleway-Italic', '../fonts/Raleway-Italic', $weight: normal, $style: italic);
+@include fontface('Raleway-Regular', '../fonts/Raleway-Regular', $weight: normal, $style: normal);
+
+@include fontface('Raleway-ThinItalic', '../fonts/Raleway-ThinItalic', $weight: 100, $style: italic);
+@include fontface('Raleway-Thin', '../fonts/Raleway-Thin', $weight: 100, $style: normal);
+
+@include fontface('Raleway-LightItalic', '../fonts/Raleway-LightItalic', $weight: 300, $style: italic);
+@include fontface('Raleway-Light', '../fonts/Raleway-Light', $weight: 300, $style: normal);
+
+@include fontface('Raleway-BoldItalic', '../fonts/Raleway-BoldItalic', $weight: 800, $style: italic);
+@include fontface('Raleway-Bold', '../fonts/Raleway-Bold', $weight: 800, $style: normal);
+
+@include fontface('Raleway-BlackItalic', '../fonts/Raleway-BlackItalic', $weight: 900, $style: italic);
+@include fontface('Raleway-Black', '../fonts/Raleway-Black', $weight: 900, $style: normal);

@@ -1,0 +1,11 @@
+#intro {
+    background: $dark;
+    .flex {
+        position: absolute;
+        z-index: 2;
+    }
+    canvas {
+        opacity: .05;
+        z-index: 1;
+    }
+}

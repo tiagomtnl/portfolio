@@ -1,0 +1,13 @@
+.text {
+    font-family: $font-light;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    color: $text-color;
+    letter-spacing: 0.2rem;
+    &--size-small {
+        font-size: 0.7rem;
+    }
+    &--uppercase {
+        text-transform: uppercase;
+    }
+}
