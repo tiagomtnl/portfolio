@@ -15,7 +15,7 @@ function init() {
     particles = new Array();
     var PI2 = Math.PI * 2;
     var material = new THREE.SpriteCanvasMaterial( {
-        color: 0x111111,
+        color: 0x555555,
         program: function ( context ) {
             context.beginPath();
             context.arc( 0, 0, 0.4, 0, PI2, true );

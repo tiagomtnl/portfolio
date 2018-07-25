@@ -127,7 +127,7 @@ body {
   align-items: stretch; }
 
 .col {
-  width: 50vw;
+  width: 50%;
   padding: 4rem;
   box-sizing: border-box; }
 
@@ -148,12 +148,13 @@ h2 {
   font-family: "Raleway-Bold", sans-serif; }
 
 #intro {
-  background: #111; }
+  background: #111;
+  overflow: hidden; }
   #intro .flex {
     position: absolute;
     z-index: 2; }
   #intro canvas {
-    opacity: .05;
+    opacity: .4;
     z-index: 1; }
 
 #work .text {
