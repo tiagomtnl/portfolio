@@ -41,14 +41,15 @@ gulp.task('sass', function() {
 });
 
 // Compile JS
-gulp.task ('scripts', function(){
-    gulp.src(inputJs)
-    .pipe(babel({
-        presets: ['env']
-    }))
-    .pipe(gulp.dest(outputJs))
-    .pipe(browserSync.stream());
-});
+gulp.task('scripts', function() {
+    return gulp.src(inputJs)
+        .pipe(babel({
+            presets: ['env']
+        }))    
+        .pipe(concat('all.js'))
+        .pipe(gulp.dest(outputJs))
+        .pipe(browserSync.stream());
+  });
 
 // Fonts to public
 gulp.task('fonts', function() {
