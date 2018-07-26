@@ -1,3 +1,23 @@
+"use strict";
+
+var emojis = [["beer", "🍻🤝"]];
+(function funConsole() {
+    if (!window.console) return;
+
+    emojis.forEach(function (emoji) {
+        window.console[emoji[0]] = function () {
+
+            var size = 1;
+            if (arguments.length > 1) {
+                size = [].pop.call(arguments);
+            }
+
+            var args = Array.prototype.slice.call(arguments).toString().split(',').join(',');
+            console.log("%c" + args + " " + emoji[1], "font-size: " + size + "px");
+        };
+    });
+})();
+console.beer("Cheers, let's do business!", 22);
 'use strict';
 
 var SEPARATION = 5,
@@ -12,8 +32,7 @@ var mouseX = 0,
     mouseY = 0;
 var windowHalfX = window.innerWidth / 2;
 var windowHalfY = window.innerHeight / 2;
-init();
-animate();
+
 function init() {
     container = document.getElementById('intro');
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
@@ -76,7 +95,7 @@ function onDocumentTouchMove(event) {
         mouseY = event.touches[0].pageY - windowHalfY;
     }
 }
-//
+
 function animate() {
     requestAnimationFrame(animate);
     render();
@@ -96,3 +115,6 @@ function render() {
     renderer.render(scene, camera);
     count += 0.1;
 }
+
+init();
+animate();
