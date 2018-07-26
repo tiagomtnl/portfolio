@@ -3,12 +3,11 @@ html {
 }
 
 body {
-    color: $light;
+    color: $dark;
     font-family: $font-regular;
     font-size: 1rem;
     letter-spacing: 0.3rem;
     box-sizing: border-box;
-    background: $dark;
 }
 
 // Flex parent 

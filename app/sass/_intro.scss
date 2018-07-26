@@ -1,12 +1,11 @@
 #intro {
-    background: $dark;
     overflow: hidden;
     .flex {
         position: absolute;
         z-index: 2;
     }
     canvas {
-        opacity: .4;
+        opacity: .1;
         z-index: 1;
     }
 }
