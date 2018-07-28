@@ -3,10 +3,10 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var concat = require('gulp-concat');
+var babel = require('gulp-babel');
 
 var sass = require('gulp-sass');
 var twig = require('gulp-twig');
-const babel = require('gulp-babel');
 
 // *********************************** PATHS *********************************** //
 
@@ -43,9 +43,7 @@ gulp.task('sass', function() {
 // Compile JS
 gulp.task('scripts', function() {
     return gulp.src(inputJs)
-        .pipe(babel({
-            presets: ['env']
-        }))    
+        .pipe(babel())    
         .pipe(concat('all.js'))
         .pipe(gulp.dest(outputJs))
         .pipe(browserSync.stream());

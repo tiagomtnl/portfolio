@@ -155,6 +155,12 @@ h2 {
     opacity: .1;
     z-index: 1; }
 
+#resume header h2#myName {
+  opacity: 0; }
+
+#resume header #myRole {
+  opacity: 0; }
+
 #work .text {
   position: relative; }
   #work .text:first-child::before {

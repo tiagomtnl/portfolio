@@ -1,3 +1,4 @@
+// Console emoji message
 var emojis = [
     [ "beer", "🍻🤝"]
 ];

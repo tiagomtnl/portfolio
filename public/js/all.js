@@ -1,5 +1,25 @@
-"use strict";
+// Transition animations
 
+var myName = document.getElementById("myName");
+var myRole = document.getElementById("myRole");
+
+window.onload = function () {
+
+    // Name & role
+    TweenMax.from(myName, 1, {
+        y: -15,
+        ease: Back.easeOut
+    });
+    TweenMax.to(myName, 1, { opacity: 1 });
+
+    TweenMax.from(myRole, 0.5, {
+        x: -15,
+        ease: Back.easeOut,
+        delay: 0.1
+    });
+    TweenMax.to(myRole, 1, { opacity: 1 });
+};
+// Console emoji message
 var emojis = [["beer", "🍻🤝"]];
 (function funConsole() {
     if (!window.console) return;
@@ -18,8 +38,7 @@ var emojis = [["beer", "🍻🤝"]];
     });
 })();
 console.beer("Cheers, let's do business!", 22);
-'use strict';
-
+// ThreeJS waves on canvas
 var SEPARATION = 5,
     AMOUNTX = 50,
     AMOUNTY = 50;
@@ -42,7 +61,7 @@ function init() {
     var PI2 = Math.PI * 2;
     var material = new THREE.SpriteCanvasMaterial({
         color: 0x555555,
-        program: function program(context) {
+        program: function (context) {
             context.beginPath();
             context.arc(0, 0, 0.4, 0, PI2, true);
             context.fill();
@@ -61,7 +80,6 @@ function init() {
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
     container.append(renderer.domElement);
-    //
 
     document.addEventListener('mousemove', onDocumentMouseMove, true);
     // document.addEventListener( 'touchstart', onDocumentTouchStart, false );
@@ -76,11 +94,12 @@ function onWindowResize() {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
 }
-//
+
 function onDocumentMouseMove(event) {
     mouseX = event.clientX - windowHalfX;
     mouseY = event.clientY - windowHalfY;
 }
+
 function onDocumentTouchStart(event) {
     if (event.touches.length === 1) {
         event.preventDefault();
@@ -88,6 +107,7 @@ function onDocumentTouchStart(event) {
         mouseY = event.touches[0].pageY - windowHalfY;
     }
 }
+
 function onDocumentTouchMove(event) {
     if (event.touches.length === 1) {
         event.preventDefault();
@@ -100,6 +120,7 @@ function animate() {
     requestAnimationFrame(animate);
     render();
 }
+
 function render() {
     camera.position.x += (mouseX - camera.position.x) * .02;
     camera.position.y += (-mouseY - camera.position.y) * .02;
