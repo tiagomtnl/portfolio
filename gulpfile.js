@@ -70,4 +70,12 @@ gulp.task('serve', ['sass', 'twigCompile'], function() {
     gulp.watch("./public/*.html").on('change', browserSync.reload);
 });
 
+// Build files
+gulp.task('build', function(){
+    gulp.start('sass');
+    gulp.start('twigCompile');
+    gulp.start('fonts');
+    gulp.start('scripts');
+});
+
 gulp.task('default', ['serve']);
