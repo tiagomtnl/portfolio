@@ -205,3 +205,19 @@ h2 {
         top: 20px;
         left: 0px;
         transition: all 0.1s; }
+
+#social {
+  position: absolute;
+  z-index: 2;
+  bottom: 3rem;
+  left: 3rem;
+  width: 100%;
+  max-width: 50%; }
+  #social li {
+    width: 100%;
+    float: left;
+    max-width: 35px;
+    opacity: 0; }
+    #social li a svg {
+      width: 100%;
+      height: auto; }
