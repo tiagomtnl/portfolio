@@ -1,5 +1,9 @@
 #work {
     opacity: 0;
+    @include mq('tablet', 'max') {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }  
     .text {
         position: relative;
         &:first-child {

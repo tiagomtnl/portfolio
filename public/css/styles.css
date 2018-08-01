@@ -151,6 +151,11 @@ h2 {
   #intro .flex {
     position: absolute;
     z-index: 2; }
+    @media only screen and (max-width: 767px) {
+      #intro .flex {
+        flex-direction: column; }
+        #intro .flex .col {
+          width: 100%; } }
   #intro canvas {
     opacity: .1;
     z-index: 1; }
@@ -161,8 +166,18 @@ h2 {
 #resume header #myRole {
   opacity: 0; }
 
+@media only screen and (max-width: 767px) {
+  #resume {
+    padding-bottom: 0;
+    padding-left: 3rem;
+    padding-right: 3rem; } }
+
 #work {
   opacity: 0; }
+  @media only screen and (max-width: 767px) {
+    #work {
+      padding-left: 3rem;
+      padding-right: 3rem; } }
   #work .text {
     position: relative; }
     #work .text:first-child::before {
